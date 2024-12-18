@@ -1,0 +1,28 @@
+JAVASCRIPT:
+
+  const reviewForm = document.getElementById("review-form");
+  const reviewsList = document.getElementById("reviews-list");
+
+  reviewForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+    const name = document.getElementById("name").value;
+    const review = document.getElementById("review").value;
+    const rating = document.getElementById("rating").value;
+    const reviewDiv = document.createElement("div");
+    reviewDiv.classList.add("review");
+    reviewDiv.innerHTML = `
+      <p><strong>${name}</strong></p>
+      <p>${review}</p>
+      <p>Rating: ${rating} star(s)</p>
+    `;
+    reviewsList.appendChild(reviewDiv);
+    reviewForm.reset();
+  });
+
+  // Adding delete functionality to existing reviews if any
+  document.querySelectorAll('.delete-review').forEach(button => {
+    button.addEventListener('click', function () {
+      button.closest('.review').remove();
+    });
+  });
+});
