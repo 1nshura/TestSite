@@ -1,0 +1,50 @@
+index4.html:
+
+<!doctype html>
+<html>
+<head>
+  <title>M2 HQ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>M2 HQ</h1>
+    <button id="mode-switch" class="mode-switch">Toggle Dark Mode</button>
+  </header>
+  <b>
+    <center><em>*Services vary due to my class schedule.* For additional information or questions, please reach out via my Contacts page*<br>
+    </em>
+  </b></center>
+  <main>
+    <section id="services">
+      <h2>Reviews<br>
+      <a href=index.html>Services</a><br>
+      <a href=index2.html>Contacts</a><br>
+      <a href=index3.html>Mission Statement</h2></a>
+      <div class="service">
+    <section id="reviews">
+      <h2>Reviews</h2>
+      <form id="review-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="review">Review:</label>
+        <textarea id="review" name="review" required></textarea>
+        <label for="rating">Rating:</label>
+        <select id="rating" name="rating" required>
+          <option value="1">1 star</option>
+          <option value="2">2 stars</option>
+          <option value="3">3 stars</option>
+          <option value="4">4 stars</option>
+          <option value="5">5 stars</option>
+        </select>
+        <button type="submit">Submit Review</button>
+      </form>
+      <h3>All Reviews</h3>
+      <div id="reviews-list"></div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; <strong>2025 Our Services. All rights reserved.</strong></p>
+  </footer>
+</body>
+</html>
